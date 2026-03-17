@@ -48,7 +48,7 @@ while True:
             if p["nombre"].lower() == nombre_venta.lower():
                 encontrado = True
                 if p["stock"] > 0:
-                    p["stock"] = -1 # Se le resta uno al stock
+                    p["stock"] = p["stock"] - 1 # Se le resta uno al stock
                     print(f" Venta realizada. Nuevo stock de {p['nombre']}: {p['stock']} ")
                 else:
                     print(f" No hay stock suficiente de {p['nombre']}.")
